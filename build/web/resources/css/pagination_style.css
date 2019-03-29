@@ -1,0 +1,60 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22 Ιαν 2019, 6:26:29 μμ
+    Author     : Tasos
+*/
+
+$border-color: #3D315B;
+$background-color: #266DD3;
+$list-background-color: #444B6E;
+$active-list-background-color: #9AB87A;
+$border-radius: 5px;
+
+* {
+  font-family: 'Poppins';
+}
+body {
+  background-color: $background-color;
+  margin: 0;
+}
+a:hover {
+  cursor: pointer;
+}
+#pagination {
+  display: flex;
+  
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  li {
+    color: #fff;
+    display: flex;
+    a {
+      background-color: #444B6E;
+      padding: 5px 10px;
+      border: 2px solid $border-color;
+      border-right: 0;
+    }
+  }
+  // li.previous,
+  // li.next {
+  //   animation: fadein .5s;
+  // }
+  li.active a {
+    background-color: $active-list-background-color;
+  }
+  li:first-child a {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+  li:last-child a {
+    border-radius: 0 $border-radius $border-radius 0;
+    border-right: 2px solid $border-color;
+  }
+}
